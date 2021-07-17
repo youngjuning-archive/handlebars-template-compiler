@@ -3,13 +3,13 @@
 ## Install
 
 ```sh
-$ npm install handlebars-template-compiler -D
+$ npm install handlebars-template-compiler
 ```
 
 OR
 
 ```sh
-$ yarn add handlebars-template-compiler -D
+$ yarn add handlebars-template-compiler
 ```
 
 ## Usage
