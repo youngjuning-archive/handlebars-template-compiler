@@ -1,0 +1,76 @@
+{
+  "name": "handlebars-template-compiler",
+  "version": "1.0.0",
+  "description": "一个简单的基于 handlebars 的模板编译器",
+  "keywords": [
+    "handlebars",
+    "template"
+  ],
+  "author": {
+    "name": "洛竹",
+    "email": "1003719811@qq.com",
+    "url": "https://youngjuning.js.org"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/youngjuning/handlebars-template-compiler#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngjuning/handlebars-template-compiler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/youngjuning/handlebars-template-compiler/issues"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "commit": "git cz",
+    "prebuild": "rimraf .dist/",
+    "build": "tsc",
+    "dev": "yarn build -w",
+    "prepublishOnly": "yarn build",
+    "release": "standard-version"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  },
+  "gitHooks": {
+    "commit-msg": "commitlint -e -V",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add ."
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@types/fs-extra": "^9.0.12",
+    "@types/handlebars": "^4.1.0",
+    "@types/micromatch": "^4.0.2",
+    "@types/recursive-readdir": "^2.2.0",
+    "@youngjuning/eslint-config": "^1.4.0",
+    "@youngjuning/prettier-config": "^1.0.0",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.2",
+    "cz-customizable": "^6.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "lint-staged": "^11.0.1",
+    "rimraf": "^3.0.2",
+    "standard-version": "^9.3.1",
+    "yorkie": "^2.0.0"
+  },
+  "resolutions": {
+    "typescript": "^4.1.6"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "micromatch": "^4.0.4",
+    "recursive-readdir": "^2.2.2"
+  }
+}
