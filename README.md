@@ -15,7 +15,16 @@ $ yarn add handlebars-template-compiler
 ## Usage
 
 ```ts
-import compiler from 'handlebars-template-compiler';
+const compiler = require('handlebars-template-compiler');
+compiler(
+  {
+    name: '洛竹',
+  },
+  './tpl',
+  {
+    tplSuffix: 'tpl',
+    exclude: ['**/*.js'],
+  }
+);
 
-compiler(meta, rootDir);
 ```

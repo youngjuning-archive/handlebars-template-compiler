@@ -1,1 +1,1 @@
-console.log('hello {{name}}');
+console.log('hello 杨俊宁');

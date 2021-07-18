@@ -1,11 +1,11 @@
 const compiler = require('handlebars-template-compiler');
 compiler(
   {
-    name: '杨俊宁',
+    name: '洛竹',
   },
   './tpl',
   {
-    include: ['**/*.tpl.*'],
+    tplSuffix: 'tpl',
     exclude: ['**/*.js'],
   }
 );
